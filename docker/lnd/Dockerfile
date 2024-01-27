@@ -13,7 +13,7 @@ RUN apk add --no-cache --update alpine-sdk git make \
   && make install
 
 # Start a new, final image to reduce size.
-FROM alpine as final
+FROM alpine:3.19.1 as final
 
 # Expose lnd ports (server, rpc).
 EXPOSE 9735 10009
